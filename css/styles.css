@@ -784,6 +784,9 @@ img {
     padding-right: 16px;
     margin: auto;
   }
+
+  /* FEAUTERS SECTION */
+
   .svg-menu-list {
     display: none;
   }
@@ -826,6 +829,8 @@ img {
     min-width: 736px;
   }
 
+  /* FEAUTERS SECTION */
+
   .list-text {
     gap: 72px 24px;
   }
@@ -848,6 +853,8 @@ img {
     padding-right: 15px;
     margin: 0 auto;
   }
+
+  /* FEAUTERS SECTION */
   .svg-menu-list {
     display: flex;
     align-items: center;
@@ -868,7 +875,7 @@ img {
     gap: 24px;
   }
   .feauters-list {
-    width: calc((100% - 24px) / 4);
+    flex-basis: calc((100% - 72px) / 4);
   }
 
   .feauter-title {
