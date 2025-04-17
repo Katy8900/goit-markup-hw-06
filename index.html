@@ -52,6 +52,11 @@
             </li>
           </ul>
         </address>
+        <button type="button" class="mob-menu" menu-open>
+          <svg class="btn-menu-icon" width="24" height="24">
+            <use href="./images/icons.svg#icon-menu"></use>
+          </svg>
+        </button>
       </div>
     </header>
     <main>
@@ -123,6 +128,7 @@
           <ul class="our-team-list">
             <li class="teams-list">
               <img
+                srcset="./images/img1.jpg 1x, ./images/img1-2x.jpg 2x"
                 src="./images/img1.jpg"
                 alt="Mark Guerrero Product Designer"
                 width="264"
@@ -180,6 +186,7 @@
             <li class="teams-list">
               <div class="img-ourteam">
                 <img
+                  srcset="./images/img2.jpg 1x, ./images/img2-2x.jpg 2x"
                   src="./images/img2.jpg"
                   alt="Tom Ford Frontend Develope"
                   width="264"
@@ -236,6 +243,7 @@
             <li class="teams-list">
               <div class="img-ourteam">
                 <img
+                  srcset="./images/img3.jpg 1x, ./images/img3-2x.jpg 2x"
                   src="./images/img3.jpg"
                   alt="Camila Garcia Marketing"
                   width="264"
@@ -292,6 +300,7 @@
             <li class="teams-list">
               <div class="img-ourteam">
                 <img
+                  srcset="./images/img4.jpg 1x, ./images/img4-2x.jpg 2x"
                   src="./images/img4.jpg"
                   alt="Daniel Wilson UI Designer"
                   width="264"
@@ -354,12 +363,35 @@
           <ul class="portfolio-img">
             <li class="portfolio-menu">
               <div class="img-text-portfolio">
-                <img
-                  src="./images/manyscreenap.jpg"
-                  alt="App on phone screen"
-                  width="360"
-                  height="300"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/manyscreenap.jpg    1x,
+                      ./images/manyscreenap-2x.jpg 2x
+                    "
+                    media="(min-width:1158px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/manyscreenap-tab.jpg    1x,
+                      ./images/manyscreenap-tab-2x.jpg 2x
+                    "
+                    media="(min-width:768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/manyscreenap-mob.jpg    1x,
+                      ./images/manyscreenap-mob-2x.jpg 2x
+                    "
+                    media="(max-width:767px)"
+                  />
+
+                  <img
+                    src="./images/manyscreenap.jpg"
+                    alt="App on phone screen"
+                    width="360"
+                  />
+                </picture>
                 <p class="img-text">
                   14 Stylish and User-Friendly App Design Concepts · Task
                   Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App
@@ -373,12 +405,30 @@
             </li>
             <li class="portfolio-menu">
               <div class="img-text-portfolio">
-                <img
-                  src="./images/QRkod.jpg"
-                  alt="QR kod pay"
-                  width="360"
-                  height="300"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/images/QRkod.jpg 1x,
+                      ./images/QRkod-2x.jpg     2x
+                    "
+                    media="(min-width:1158px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/images/QRkod-tab.jpg 1x,
+                      ./images/QRkod-tab-2x.jpg     2x
+                    "
+                    media="(min-width:768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/images/QRkod-mob.jpg 1x,
+                      ./images/QRkod-mob-2x.jpg     2x
+                    "
+                    media="(max-width:767px)"
+                  />
+                  <img src="./images/QRkod.jpg" alt="QR kod pay" width="360" />
+                </picture>
                 <p class="img-text">
                   14 Stylish and User-Friendly App Design Concepts · Task
                   Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App
@@ -392,12 +442,34 @@
             </li>
             <li class="portfolio-menu">
               <div class="img-text-portfolio">
-                <img
-                  src="./images/laptopwithpfone.jpg"
-                  alt="Laptop with phone"
-                  width="360"
-                  height="300"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/laptopwithpfone.jpg    1x,
+                      ./images/laptopwithpfone-2x.jpg 2x
+                    "
+                    media="(min-width:1158px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/laptopwithpfone-tab.jpg    1x,
+                      ./images/laptopwithpfone-tab-2x.jpg 2x
+                    "
+                    media="(min-width:768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/laptopwithpfone-mob.jpg    1x,
+                      ./images/laptopwithpfone-mob-2x.jpg 2x
+                    "
+                    media="(max-width:767px)"
+                  />
+                  <img
+                    src="./images/laptopwithpfone.jpg"
+                    alt="Laptop with phone"
+                    width="360"
+                  />
+                </picture>
                 <p class="img-text">
                   14 Stylish and User-Friendly App Design Concepts · Task
                   Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App
@@ -411,12 +483,31 @@
             </li>
             <li class="portfolio-menu">
               <div class="img-text-portfolio">
-                <img
-                  src="./images/Incar.jpg"
-                  alt="Picture in car"
-                  width="360"
-                  height="300"
-                />
+                <picture>
+                  <source
+                    srcset="./images/Incar.jpg 1x, ./images/Incar-2x.jpg 2x"
+                    media="(min-width:1158px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/Incar-tab.jpg    1x,
+                      ./images/Incar-tab-2x.jpg 2x
+                    "
+                    media="(min-width:768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/Incar-mob.jpg    1x,
+                      ./images/Incar-mob-2x.jpg 2x
+                    "
+                    media="(max-width:767px)"
+                  />
+                  <img
+                    src="./images/Incar.jpg"
+                    alt="Picture in car"
+                    width="360"
+                  />
+                </picture>
                 <p class="img-text">
                   14 Stylish and User-Friendly App Design Concepts · Task
                   Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App
@@ -430,12 +521,34 @@
             </li>
             <li class="portfolio-menu">
               <div class="img-text-portfolio">
-                <img
-                  src="./images/moononphonescreen.jpg"
-                  alt="Screen Illustrations"
-                  width="360"
-                  height="300"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/moononphonescreen.jpg    1x,
+                      ./images/moononphonescreen-2x.jpg 2x
+                    "
+                    media="(min-width:1158px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/moononphonescreen-tab.jpg    1x,
+                      ./images/moononphonescreen-tab-2x.jpg 2x
+                    "
+                    media="(min-width:768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/moononphonescreen-mob.jpg    1x,
+                      ./images/moononphonescreen-mob-2x.jpg 2x
+                    "
+                    media="(max-width:767px)"
+                  />
+                  <img
+                    src="./images/moononphonescreen.jpg"
+                    alt="Screen Illustrations"
+                    width="360"
+                  />
+                </picture>
                 <p class="img-text">
                   14 Stylish and User-Friendly App Design Concepts · Task
                   Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App
@@ -449,12 +562,35 @@
             </li>
             <li class="portfolio-menu">
               <div class="img-text-portfolio">
-                <img
-                  src="./images/womaninorahge.jpg"
-                  alt="Woman in orange"
-                  width="360"
-                  height="300"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/womaninorahge.jpg    1x,
+                      ./images/womaninorahge-2x.jpg 2x
+                    "
+                    media="(min-width:1158px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/womaninorahge-tab.jpg    1x,
+                      ./images/womaninorahge-tab-2x.jpg 2x
+                    "
+                    media="(min-width:768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/womaninorahge-mob.jpg    1x,
+                      ./images/womaninorahge-mob-2x.jpg 2x
+                    "
+                    media="(max-width:767px)"
+                  />
+                  <img
+                    src="./images/womaninorahge.jpg"
+                    alt="Woman in orange"
+                    width="360"
+                  />
+                </picture>
+
                 <p class="img-text">
                   14 Stylish and User-Friendly App Design Concepts · Task
                   Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App
@@ -548,7 +684,7 @@
         </div>
       </div>
     </footer>
-    <!-- <div class="overlay">
+    <div class="overlay">
       <div class="modal">
         <button type="button" class="btn-modal-close">
           <svg class="btn-icon-close" width="8" height="8">
@@ -637,6 +773,6 @@
           <button type="submit" class="send-btn">Send</button>
         </form>
       </div>
-    </div> -->
+    </div>
   </body>
 </html>

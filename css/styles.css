@@ -769,7 +769,7 @@ img {
 
 /* MOBILE SCREEN */
 
-@media screen and (min-width: 288px) {
+@media screen and (min-width: 320px) {
   *,
   ::after,
   ::before {
@@ -777,13 +777,31 @@ img {
   }
 
   .container {
-    min-width: 288px;
-    padding-left: 16px;
-    padding-right: 16px;
-    margin: auto;
+    width: 288px;
+    padding: 0;
+    margin: 0 auto;
   }
 
   /* hero */
+
+  .header-menu {
+    display: none;
+  }
+  .contacts-all {
+    display: none;
+  }
+
+  .mob-menu {
+    padding: 0;
+    border: none;
+    background-color: transparent;
+  }
+
+  .btn-menu-icon {
+    display: block;
+    fill: #2f2f37;
+  }
+
   .top-header {
     border-bottom: 1px solid #e7e9fc;
     box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08),
@@ -827,11 +845,22 @@ img {
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
       ),
-      url(../images/people-heder.jpg);
+      url(../images/mobile-screen.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
   }
+
+  @media screen and (min-resolution: 2x) {
+    .solutions {
+      background-image: linear-gradient(
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url(../images/mobile-screen-2x.jpg);
+    }
+  }
+
   .btn {
     font-family: "Roboto", sans-serif;
     font-weight: 500;
@@ -940,8 +969,7 @@ img {
   .our-team-list {
     display: flex;
     flex-wrap: wrap;
-    padding-left: 12px;
-    padding-right: 12px;
+    justify-content: center;
     gap: 72px;
   }
   .teams-list {
@@ -1211,185 +1239,8 @@ img {
     justify-content: center;
     gap: 24px;
   }
-}
 
-/* TABLET SCREEN */
-
-@media screen and (min-width: 736px) {
-  .container {
-    min-width: 736px;
-  }
-
-  /* hero */
-  .header-logo {
-    margin-right: 120px;
-    padding-top: 24px;
-    padding-bottom: 24px;
-  }
-
-  .header-menu {
-    display: flex;
-    align-items: center;
-    gap: 40px;
-    list-style: none;
-    padding: 0;
-  }
-  .contacts-all {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-    list-style: none;
-    align-items: center;
-  }
-  .contacts-nav {
-    font-style: normal;
-    margin-left: auto;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 1.17;
-    letter-spacing: 0.04em;
-    color: #434455;
-  }
-  .tel-mail {
-    display: block;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 1.17;
-    letter-spacing: 0.04em;
-    color: #434455;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  }
-  .tel-mail:hover,
-  .tel-mail:focus {
-    color: #404bbf;
-  }
-  .menu-list-nav {
-    position: relative;
-    display: block;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: 0.02em;
-    color: #2e2f42;
-    padding-top: 24px;
-    padding-bottom: 24px;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  }
-  .menu-list-nav::after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 4px;
-    left: 0;
-    bottom: -1px;
-    border-radius: 2px;
-    background-color: #404bbf;
-    opacity: 0;
-    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  }
-
-  .menu-list-nav:hover:after,
-  .menu-list-nav:focus::after,
-  .menu-list-nav.current::after {
-    opacity: 1;
-  }
-
-  .menu-list-nav:hover,
-  .menu-list-nav:focus,
-  .menu-list-nav.current {
-    color: #404bbf;
-  }
-  .menu-list-nav.current {
-    position: relative;
-  }
-
-  /* section solution */
-  .solutions {
-    padding-top: 112px;
-    padding-bottom: 112px;
-    max-width: 768px;
-  }
-  .my-title {
-    max-width: 496px;
-    font-weight: 700;
-    font-size: 56px;
-    line-height: 1.07;
-  }
-
-  /* feauters section */
-
-  .list-text {
-    gap: 72px 24px;
-  }
-
-  .feauters-list {
-    flex-basis: calc((100% - 24px) / 2);
-  }
-  .feauter-title {
-    text-align: start;
-  }
-
-  /* our team section */
-
-  .our-team-list {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 0;
-    gap: 64px 24px;
-    align-items: center;
-    justify-content: center;
-  }
-  /* portfolio section */
-
-  .portfolio-img {
-    display: flex;
-    flex-wrap: wrap;
-    column-gap: 24px;
-    row-gap: 72px;
-  }
-  .portfolio-menu {
-    width: calc((100% - 24px) / 2);
-    border-radius: 0px 0px 4px 4px;
-    background-color: #ffffff;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  }
-
-  /* footer */
-
-  .container-end {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: baseline;
-    text-align: left;
-  }
-  .text-end {
-    max-width: 264px;
-  }
-  .footer-form {
-    flex-wrap: nowrap;
-    gap: 24px;
-  }
-  .subscribe-email-text {
-    width: 264px;
-  }
-
-  .container-page-end {
-    margin-bottom: 0;
-    padding-left: 108px;
-    margin-right: 24px;
-  }
-
-  .footer-form-subscribe {
-    padding-left: 108px;
-  }
-
-  .soc-media {
-    margin: 0;
-  }
-
-  /* OVERLAY */
+  /* Overlay */
 
   .overlay {
     width: 100%;
@@ -1411,8 +1262,8 @@ img {
   }
 
   .modal {
-    width: 408px;
-    min-height: 584px;
+    width: 288px;
+    min-height: 623px;
     border-radius: 4px;
     box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12),
       0 2px 1px 0 rgba(0, 0, 0, 0.2);
@@ -1421,7 +1272,7 @@ img {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    padding: 72px 24px 24px 24px;
+    padding: 72px 16px 24px 16px;
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 
@@ -1608,11 +1459,219 @@ img {
   }
 }
 
+/* TABLET SCREEN */
+
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+    padding: 0 16px;
+  }
+
+  /* hero */
+
+  .header-logo {
+    margin-right: 120px;
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+
+  .header-menu {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    list-style: none;
+    padding: 0;
+  }
+  .contacts-all {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: end;
+    gap: 12px;
+    list-style: none;
+    align-items: center;
+  }
+  .contacts-nav {
+    font-style: normal;
+    margin-left: auto;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    color: #434455;
+  }
+  .tel-mail {
+    display: block;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    color: #434455;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .tel-mail:hover,
+  .tel-mail:focus {
+    color: #404bbf;
+  }
+  .menu-list-nav {
+    position: relative;
+    display: block;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #2e2f42;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .menu-list-nav::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    left: 0;
+    bottom: -1px;
+    border-radius: 2px;
+    background-color: #404bbf;
+    opacity: 0;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .menu-list-nav:hover:after,
+  .menu-list-nav:focus::after,
+  .menu-list-nav.current::after {
+    opacity: 1;
+  }
+
+  .menu-list-nav:hover,
+  .menu-list-nav:focus,
+  .menu-list-nav.current {
+    color: #404bbf;
+  }
+  .menu-list-nav.current {
+    position: relative;
+  }
+
+  /* section solution */
+  .solutions {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/Tablet-screen.jpg);
+    padding-top: 112px;
+    padding-bottom: 112px;
+    max-width: 768px;
+  }
+  @media screen and (min-resolution: 2x) {
+    .solutions {
+      background-image: linear-gradient(
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url(../images/tablet-screen-2x.jpg);
+    }
+  }
+  .my-title {
+    max-width: 496px;
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 1.07;
+  }
+
+  /* feauters section */
+
+  .list-text {
+    gap: 72px 24px;
+  }
+
+  .feauters-list {
+    flex-basis: calc((100% - 24px) / 2);
+  }
+  .feauter-title {
+    text-align: start;
+  }
+
+  /* our team section */
+
+  .our-team-list {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    gap: 64px 24px;
+    align-items: center;
+    justify-content: center;
+  }
+  /* portfolio section */
+
+  .portfolio-img {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 24px;
+    row-gap: 72px;
+  }
+  .portfolio-menu {
+    width: calc((100% - 24px) / 2);
+    border-radius: 0px 0px 4px 4px;
+    background-color: #ffffff;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* footer */
+
+  .container-end {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    text-align: left;
+  }
+  .text-end {
+    max-width: 264px;
+  }
+  .footer-form {
+    flex-wrap: nowrap;
+    gap: 24px;
+  }
+  .subscribe-email-text {
+    width: 264px;
+  }
+
+  .container-page-end {
+    margin-bottom: 0;
+    padding-left: 92px;
+    margin-right: 24px;
+  }
+
+  .footer-form-subscribe {
+    padding-left: 92px;
+  }
+
+  .soc-media {
+    margin: 0;
+  }
+
+  /* OVERLAY */
+
+  .is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+
+  .modal {
+    width: 408px;
+    min-height: 584px;
+    padding: 72px 24px 24px 24px;
+  }
+}
+
 /* LAPTOP SCREEN */
 
-@media screen and (min-width: 1128px) {
+@media screen and (min-width: 1158px) {
   .container {
-    max-width: 1158px;
+    width: 1158px;
     padding-left: 15px;
     padding-right: 15px;
     margin: 0 auto;
@@ -1625,7 +1684,7 @@ img {
   }
   .contacts-all {
     flex-wrap: nowrap;
-    gap: 40;
+    gap: 40px;
   }
 
   .contacts-nav {
@@ -1645,9 +1704,23 @@ img {
   /* section solution */
 
   .solutions {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/people-heder.jpg);
     padding-top: 188px;
     padding-bottom: 188px;
     max-width: 1440px;
+  }
+  @media screen and (min-resolution: 2x) {
+    .solutions {
+      background-image: linear-gradient(
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url(../images/people-office-2x.jpg);
+    }
   }
 
   /* feauters section */
