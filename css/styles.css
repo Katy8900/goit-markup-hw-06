@@ -770,6 +770,11 @@ img {
 /* MOBILE SCREEN */
 
 @media screen and (min-width: 320px) {
+  .is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
   *,
   ::after,
   ::before {
@@ -791,6 +796,25 @@ img {
     display: none;
   }
 
+  /* MENU-MOB */
+
+  .menu-open {
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    z-index: 99;
+    padding-top: 72px;
+    padding-left: 16px;
+    padding-right: 24px;
+    padding-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    visibility: hidden;
+  }
+
   .mob-menu {
     padding: 0;
     border: none;
@@ -801,6 +825,82 @@ img {
     display: block;
     fill: #2f2f37;
   }
+
+  .btn-menu-close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    cursor: pointer;
+    padding: 0;
+    top: 24px;
+    right: 24px;
+    width: 24px;
+    height: 24px;
+    border-radius: 100%;
+    background-color: transparent;
+    border: 1px solid #e7e9fc;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+      border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .btn-menu-close:hover,
+  .btn-menu-close:focus {
+    background-color: #404bbf;
+    fill: white;
+    border: none;
+  }
+
+  .icon-menu-close {
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .mob-social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+  }
+  .menu-open-list-nav {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.11111;
+    letter-spacing: 0.02em;
+    color: #2e2f42;
+  }
+
+  .menu-open-list-nav.purple {
+    color: #404bbf;
+  }
+  .menu-open-list {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+  .mob-menu-contacts {
+    margin-bottom: 48px;
+  }
+  .mob-menu-contacts-all:not(:last-child) {
+    margin-bottom: 24px;
+  }
+
+  .mob-contact {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    color: #434455;
+    text-decoration: none;
+    font-style: normal;
+    font-weight: normal;
+  }
+
+  .mob-contact.purple-tel {
+    color: #4d5ae5;
+  }
+
+  /* HEADER */
 
   .top-header {
     border-bottom: 1px solid #e7e9fc;
@@ -1468,6 +1568,14 @@ img {
   }
 
   /* hero */
+
+  .mob-menu {
+    display: none;
+  }
+
+  .menu-open {
+    display: none;
+  }
 
   .header-logo {
     margin-right: 120px;
