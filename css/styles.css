@@ -1000,6 +1000,8 @@ a {
     flex-wrap: wrap;
     align-items: baseline;
     text-align: left;
+    padding-left: 108px;
+    padding-right: 108px;
   }
   .text-end {
     max-width: 264px;
@@ -1013,17 +1015,10 @@ a {
   }
 
   .container-page-end {
-    margin-bottom: 0;
-    padding-left: 92px;
     margin-right: 24px;
   }
 
   .footer-form-subscribe {
-    padding-left: 92px;
-  }
-
-  .soc-media {
-    margin: 0;
   }
 
   /* OVERLAY */
